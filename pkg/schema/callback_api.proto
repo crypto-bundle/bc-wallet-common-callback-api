@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package callbackevents;
+
+option go_package = "github.com/crypto-bundle/bc-wallet-common-callback-api/pkg/proto/callbackevents";
+
+import "order_events.proto";
+import "common.proto";
+import "google/api/annotations.proto";
+
+message NewEventRequest {
+    EventType event_type = 1;
+    oneof event {
+        OrderEvent order_event = 2;
+    }
+}
+
+message NewEventResponse {
+    EventType event_type = 1;
+    string EventIdentity = 2;
+}
+
+/*
+ * Merchant RPC api gateway
+ */
+service CallbackAPI {
+  rpc NewEvent                   (NewEventRequest)                   returns (NewEventResponse) {
+    option (google.api.http) = {
+      post: "/api/cryptobundle/v1/new_event"
+    };
+  }
+ }

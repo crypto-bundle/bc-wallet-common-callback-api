@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package callbackevents;
+
+option go_package = "github.com/crypto-bundle/bc-wallet-common-callback-api/pkg/proto/callbackevents";
+
+enum EventType {
+  PLACEHOLDER_EVENT_TYPE = 0;
+  EVENT_TYPE_ORDER = 1;
+}

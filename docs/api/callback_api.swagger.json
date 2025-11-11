@@ -1,0 +1,520 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "callback_api.proto",
+    "version": "version not set"
+  },
+  "tags": [
+    {
+      "name": "CallbackAPI"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/cryptobundle/v1/new_event": {
+      "post": {
+        "operationId": "CallbackAPI_NewEvent",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/callbackeventsNewEventResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "eventType",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "PLACEHOLDER_EVENT_TYPE",
+              "EVENT_TYPE_ORDER"
+            ],
+            "default": "PLACEHOLDER_EVENT_TYPE"
+          },
+          {
+            "name": "orderEvent.EventIdentity",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "orderEvent.NetworkIdentifier",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "orderEvent.ProviderIdentifier",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "orderEvent.MerchantIdentifier",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "orderEvent.OrderIdentifier",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "orderEvent.Type",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "orderEvent.Producer",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "orderEvent.Message",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "orderEvent.OrderInfo.OrderIdentifier.UUID",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "orderEvent.OrderInfo.OrderIdentifier.ExternalOrderUUID",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "orderEvent.OrderInfo.OrderIdentifier.ProviderOrderUUID",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "orderEvent.OrderInfo.Type",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "PLACEHOLDER_ORDER_TYPE",
+              "WITHDRAW",
+              "DEPOSIT"
+            ],
+            "default": "PLACEHOLDER_ORDER_TYPE"
+          },
+          {
+            "name": "orderEvent.OrderInfo.Status",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "PLACEHOLDER_ORDER_STATUS",
+              "ACCEPTED",
+              "CREATED",
+              "PROCESSING",
+              "CONFIRMED",
+              "FAILED",
+              "SUCCESS",
+              "CANCELED"
+            ],
+            "default": "PLACEHOLDER_ORDER_STATUS"
+          },
+          {
+            "name": "orderEvent.OrderInfo.NetworkIdentifier",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "orderEvent.OrderInfo.ProviderIdentifier",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "orderEvent.OrderInfo.MerchantIdentifier",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "orderEvent.OrderInfo.AddressIdentifier",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "orderEvent.OrderInfo.Amount",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "orderEvent.OrderInfo.RealFee",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "orderEvent.OrderInfo.EstimationFeeUnitIdentifier.UUID",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "orderEvent.OrderInfo.OwnerWallet.WalletUUID",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "orderEvent.OrderInfo.OwnerWallet.AccountUUID",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "orderEvent.OrderInfo.CurrencyIdentifier.UUID",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "CallbackAPI"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "callbackeventsBcTxIdentity": {
+      "type": "object",
+      "properties": {
+        "TxID": {
+          "type": "string"
+        },
+        "Meta": {
+          "type": "string",
+          "format": "byte"
+        }
+      }
+    },
+    "callbackeventsBcTxInfo": {
+      "type": "object",
+      "properties": {
+        "NetworkIdentifier": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "BcTxIdentifier": {
+          "$ref": "#/definitions/callbackeventsBcTxIdentity"
+        },
+        "Confirmations": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "BlockNumber": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "Operations": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/callbackeventsOperationsList"
+          }
+        },
+        "Status": {
+          "$ref": "#/definitions/callbackeventsBcTxStatus"
+        },
+        "RealFee": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "ExplorerURL": {
+          "type": "string"
+        }
+      }
+    },
+    "callbackeventsBcTxOperation": {
+      "type": "object",
+      "properties": {
+        "Index": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "Address": {
+          "type": "string"
+        },
+        "Amount": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "CurrencyInfo": {
+          "$ref": "#/definitions/callbackeventsCurrencyInfo"
+        }
+      }
+    },
+    "callbackeventsBcTxStatus": {
+      "type": "string",
+      "enum": [
+        "PLACEHOLDER_BC_TX_STATUS",
+        "BC_TX_IN_MINING",
+        "BC_TX_SUCCESS",
+        "BC_TX_EXECUTION_FAILED",
+        "BC_TX_WAITING_FOR_CONFIRMATIONS"
+      ],
+      "default": "PLACEHOLDER_BC_TX_STATUS"
+    },
+    "callbackeventsCurrencyIdentity": {
+      "type": "object",
+      "properties": {
+        "UUID": {
+          "type": "string"
+        }
+      }
+    },
+    "callbackeventsCurrencyInfo": {
+      "type": "object",
+      "properties": {
+        "Identifier": {
+          "$ref": "#/definitions/callbackeventsCurrencyIdentity"
+        },
+        "Symbol": {
+          "type": "string"
+        },
+        "Decimals": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "callbackeventsEstimationFeeUnitIdentify": {
+      "type": "object",
+      "properties": {
+        "UUID": {
+          "type": "string"
+        }
+      }
+    },
+    "callbackeventsEventType": {
+      "type": "string",
+      "enum": [
+        "PLACEHOLDER_EVENT_TYPE",
+        "EVENT_TYPE_ORDER"
+      ],
+      "default": "PLACEHOLDER_EVENT_TYPE"
+    },
+    "callbackeventsNewEventResponse": {
+      "type": "object",
+      "properties": {
+        "eventType": {
+          "$ref": "#/definitions/callbackeventsEventType"
+        },
+        "EventIdentity": {
+          "type": "string"
+        }
+      }
+    },
+    "callbackeventsOperationsList": {
+      "type": "object",
+      "properties": {
+        "Operations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/callbackeventsBcTxOperation"
+          }
+        }
+      }
+    },
+    "callbackeventsOrder": {
+      "type": "object",
+      "properties": {
+        "OrderIdentifier": {
+          "$ref": "#/definitions/callbackeventsOrderIdentity"
+        },
+        "Type": {
+          "$ref": "#/definitions/callbackeventsOrderType"
+        },
+        "Status": {
+          "$ref": "#/definitions/callbackeventsOrderStatus"
+        },
+        "NetworkIdentifier": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "ProviderIdentifier": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "MerchantIdentifier": {
+          "type": "string"
+        },
+        "AddressIdentifier": {
+          "type": "string"
+        },
+        "Amount": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "RealFee": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "EstimationFeeUnitIdentifier": {
+          "$ref": "#/definitions/callbackeventsEstimationFeeUnitIdentify"
+        },
+        "OwnerWallet": {
+          "$ref": "#/definitions/callbackeventsOwnerWalletInfo"
+        },
+        "CurrencyIdentifier": {
+          "$ref": "#/definitions/callbackeventsCurrencyIdentity"
+        },
+        "BcTx": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/callbackeventsBcTxInfo"
+          }
+        }
+      }
+    },
+    "callbackeventsOrderEvent": {
+      "type": "object",
+      "properties": {
+        "EventIdentity": {
+          "type": "string"
+        },
+        "NetworkIdentifier": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "ProviderIdentifier": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "MerchantIdentifier": {
+          "type": "string"
+        },
+        "OrderIdentifier": {
+          "type": "string"
+        },
+        "Type": {
+          "type": "string"
+        },
+        "Producer": {
+          "type": "string"
+        },
+        "Message": {
+          "type": "string"
+        },
+        "OrderInfo": {
+          "$ref": "#/definitions/callbackeventsOrder"
+        }
+      }
+    },
+    "callbackeventsOrderIdentity": {
+      "type": "object",
+      "properties": {
+        "UUID": {
+          "type": "string"
+        },
+        "ExternalOrderUUID": {
+          "type": "string"
+        },
+        "ProviderOrderUUID": {
+          "type": "string"
+        }
+      }
+    },
+    "callbackeventsOrderStatus": {
+      "type": "string",
+      "enum": [
+        "PLACEHOLDER_ORDER_STATUS",
+        "ACCEPTED",
+        "CREATED",
+        "PROCESSING",
+        "CONFIRMED",
+        "FAILED",
+        "SUCCESS",
+        "CANCELED"
+      ],
+      "default": "PLACEHOLDER_ORDER_STATUS"
+    },
+    "callbackeventsOrderType": {
+      "type": "string",
+      "enum": [
+        "PLACEHOLDER_ORDER_TYPE",
+        "WITHDRAW",
+        "DEPOSIT"
+      ],
+      "default": "PLACEHOLDER_ORDER_TYPE"
+    },
+    "callbackeventsOwnerWalletInfo": {
+      "type": "object",
+      "properties": {
+        "WalletUUID": {
+          "type": "string"
+        },
+        "AccountUUID": {
+          "type": "string"
+        }
+      }
+    },
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    }
+  }
+}
