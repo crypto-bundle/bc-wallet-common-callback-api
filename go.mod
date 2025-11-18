@@ -1,4 +1,4 @@
-module github.com/crypto-bundle/bc
+module github.com/crypto-bundle/bc-wallet-common-callback-api
 
 go 1.23.0
 
