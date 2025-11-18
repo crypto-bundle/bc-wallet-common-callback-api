@@ -1,1 +1,29 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+env-*.env
+!env-*-example.env
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
 .idea
+.vscode
+.zed
+
+README_local.md
+Makefile.local.mk
+
+# Dependency directories (remove the comment below to include it)
+vendor/
+build/certs
+build/*
+
+deploy/helm/*/values_local.yaml
+deploy/certs/*/*.*
