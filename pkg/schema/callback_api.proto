@@ -4,8 +4,8 @@ package callbackevents;
 
 option go_package = "github.com/crypto-bundle/bc-wallet-common-callback-api/pkg/proto/callbackevents";
 
-import "order_events.proto";
-import "common.proto";
+import "callback_common.proto";
+import "callback_order_events.proto";
 import "google/api/annotations.proto";
 
 message NewEventRequest {
