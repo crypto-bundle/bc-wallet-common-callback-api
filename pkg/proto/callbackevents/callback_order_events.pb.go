@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.6
 // 	protoc        v6.30.2
-// source: order_events.proto
+// source: callback_order_events.proto
 
 package callbackevents
 
@@ -54,11 +54,11 @@ func (x OrderType) String() string {
 }
 
 func (OrderType) Descriptor() protoreflect.EnumDescriptor {
-	return file_order_events_proto_enumTypes[0].Descriptor()
+	return file_callback_order_events_proto_enumTypes[0].Descriptor()
 }
 
 func (OrderType) Type() protoreflect.EnumType {
-	return &file_order_events_proto_enumTypes[0]
+	return &file_callback_order_events_proto_enumTypes[0]
 }
 
 func (x OrderType) Number() protoreflect.EnumNumber {
@@ -67,7 +67,7 @@ func (x OrderType) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use OrderType.Descriptor instead.
 func (OrderType) EnumDescriptor() ([]byte, []int) {
-	return file_order_events_proto_rawDescGZIP(), []int{0}
+	return file_callback_order_events_proto_rawDescGZIP(), []int{0}
 }
 
 type OrderStatus int32
@@ -118,11 +118,11 @@ func (x OrderStatus) String() string {
 }
 
 func (OrderStatus) Descriptor() protoreflect.EnumDescriptor {
-	return file_order_events_proto_enumTypes[1].Descriptor()
+	return file_callback_order_events_proto_enumTypes[1].Descriptor()
 }
 
 func (OrderStatus) Type() protoreflect.EnumType {
-	return &file_order_events_proto_enumTypes[1]
+	return &file_callback_order_events_proto_enumTypes[1]
 }
 
 func (x OrderStatus) Number() protoreflect.EnumNumber {
@@ -131,7 +131,7 @@ func (x OrderStatus) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use OrderStatus.Descriptor instead.
 func (OrderStatus) EnumDescriptor() ([]byte, []int) {
-	return file_order_events_proto_rawDescGZIP(), []int{1}
+	return file_callback_order_events_proto_rawDescGZIP(), []int{1}
 }
 
 type OperationType int32
@@ -170,11 +170,11 @@ func (x OperationType) String() string {
 }
 
 func (OperationType) Descriptor() protoreflect.EnumDescriptor {
-	return file_order_events_proto_enumTypes[2].Descriptor()
+	return file_callback_order_events_proto_enumTypes[2].Descriptor()
 }
 
 func (OperationType) Type() protoreflect.EnumType {
-	return &file_order_events_proto_enumTypes[2]
+	return &file_callback_order_events_proto_enumTypes[2]
 }
 
 func (x OperationType) Number() protoreflect.EnumNumber {
@@ -183,7 +183,7 @@ func (x OperationType) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use OperationType.Descriptor instead.
 func (OperationType) EnumDescriptor() ([]byte, []int) {
-	return file_order_events_proto_rawDescGZIP(), []int{2}
+	return file_callback_order_events_proto_rawDescGZIP(), []int{2}
 }
 
 type BcTxStatus int32
@@ -225,11 +225,11 @@ func (x BcTxStatus) String() string {
 }
 
 func (BcTxStatus) Descriptor() protoreflect.EnumDescriptor {
-	return file_order_events_proto_enumTypes[3].Descriptor()
+	return file_callback_order_events_proto_enumTypes[3].Descriptor()
 }
 
 func (BcTxStatus) Type() protoreflect.EnumType {
-	return &file_order_events_proto_enumTypes[3]
+	return &file_callback_order_events_proto_enumTypes[3]
 }
 
 func (x BcTxStatus) Number() protoreflect.EnumNumber {
@@ -238,7 +238,7 @@ func (x BcTxStatus) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use BcTxStatus.Descriptor instead.
 func (BcTxStatus) EnumDescriptor() ([]byte, []int) {
-	return file_order_events_proto_rawDescGZIP(), []int{3}
+	return file_callback_order_events_proto_rawDescGZIP(), []int{3}
 }
 
 type EstimationFeeIdentify struct {
@@ -250,7 +250,7 @@ type EstimationFeeIdentify struct {
 
 func (x *EstimationFeeIdentify) Reset() {
 	*x = EstimationFeeIdentify{}
-	mi := &file_order_events_proto_msgTypes[0]
+	mi := &file_callback_order_events_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -262,7 +262,7 @@ func (x *EstimationFeeIdentify) String() string {
 func (*EstimationFeeIdentify) ProtoMessage() {}
 
 func (x *EstimationFeeIdentify) ProtoReflect() protoreflect.Message {
-	mi := &file_order_events_proto_msgTypes[0]
+	mi := &file_callback_order_events_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -275,7 +275,7 @@ func (x *EstimationFeeIdentify) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use EstimationFeeIdentify.ProtoReflect.Descriptor instead.
 func (*EstimationFeeIdentify) Descriptor() ([]byte, []int) {
-	return file_order_events_proto_rawDescGZIP(), []int{0}
+	return file_callback_order_events_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *EstimationFeeIdentify) GetUUID() string {
@@ -294,7 +294,7 @@ type EstimationFeeUnitIdentify struct {
 
 func (x *EstimationFeeUnitIdentify) Reset() {
 	*x = EstimationFeeUnitIdentify{}
-	mi := &file_order_events_proto_msgTypes[1]
+	mi := &file_callback_order_events_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -306,7 +306,7 @@ func (x *EstimationFeeUnitIdentify) String() string {
 func (*EstimationFeeUnitIdentify) ProtoMessage() {}
 
 func (x *EstimationFeeUnitIdentify) ProtoReflect() protoreflect.Message {
-	mi := &file_order_events_proto_msgTypes[1]
+	mi := &file_callback_order_events_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -319,7 +319,7 @@ func (x *EstimationFeeUnitIdentify) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use EstimationFeeUnitIdentify.ProtoReflect.Descriptor instead.
 func (*EstimationFeeUnitIdentify) Descriptor() ([]byte, []int) {
-	return file_order_events_proto_rawDescGZIP(), []int{1}
+	return file_callback_order_events_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *EstimationFeeUnitIdentify) GetUUID() string {
@@ -340,7 +340,7 @@ type OrderIdentity struct {
 
 func (x *OrderIdentity) Reset() {
 	*x = OrderIdentity{}
-	mi := &file_order_events_proto_msgTypes[2]
+	mi := &file_callback_order_events_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -352,7 +352,7 @@ func (x *OrderIdentity) String() string {
 func (*OrderIdentity) ProtoMessage() {}
 
 func (x *OrderIdentity) ProtoReflect() protoreflect.Message {
-	mi := &file_order_events_proto_msgTypes[2]
+	mi := &file_callback_order_events_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -365,7 +365,7 @@ func (x *OrderIdentity) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use OrderIdentity.ProtoReflect.Descriptor instead.
 func (*OrderIdentity) Descriptor() ([]byte, []int) {
-	return file_order_events_proto_rawDescGZIP(), []int{2}
+	return file_callback_order_events_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *OrderIdentity) GetUUID() string {
@@ -399,7 +399,7 @@ type BcTxIdentity struct {
 
 func (x *BcTxIdentity) Reset() {
 	*x = BcTxIdentity{}
-	mi := &file_order_events_proto_msgTypes[3]
+	mi := &file_callback_order_events_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -411,7 +411,7 @@ func (x *BcTxIdentity) String() string {
 func (*BcTxIdentity) ProtoMessage() {}
 
 func (x *BcTxIdentity) ProtoReflect() protoreflect.Message {
-	mi := &file_order_events_proto_msgTypes[3]
+	mi := &file_callback_order_events_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -424,7 +424,7 @@ func (x *BcTxIdentity) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use BcTxIdentity.ProtoReflect.Descriptor instead.
 func (*BcTxIdentity) Descriptor() ([]byte, []int) {
-	return file_order_events_proto_rawDescGZIP(), []int{3}
+	return file_callback_order_events_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *BcTxIdentity) GetTxID() string {
@@ -450,7 +450,7 @@ type CurrencyIdentity struct {
 
 func (x *CurrencyIdentity) Reset() {
 	*x = CurrencyIdentity{}
-	mi := &file_order_events_proto_msgTypes[4]
+	mi := &file_callback_order_events_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -462,7 +462,7 @@ func (x *CurrencyIdentity) String() string {
 func (*CurrencyIdentity) ProtoMessage() {}
 
 func (x *CurrencyIdentity) ProtoReflect() protoreflect.Message {
-	mi := &file_order_events_proto_msgTypes[4]
+	mi := &file_callback_order_events_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -475,7 +475,7 @@ func (x *CurrencyIdentity) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CurrencyIdentity.ProtoReflect.Descriptor instead.
 func (*CurrencyIdentity) Descriptor() ([]byte, []int) {
-	return file_order_events_proto_rawDescGZIP(), []int{4}
+	return file_callback_order_events_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *CurrencyIdentity) GetUUID() string {
@@ -496,7 +496,7 @@ type CurrencyInfo struct {
 
 func (x *CurrencyInfo) Reset() {
 	*x = CurrencyInfo{}
-	mi := &file_order_events_proto_msgTypes[5]
+	mi := &file_callback_order_events_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -508,7 +508,7 @@ func (x *CurrencyInfo) String() string {
 func (*CurrencyInfo) ProtoMessage() {}
 
 func (x *CurrencyInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_order_events_proto_msgTypes[5]
+	mi := &file_callback_order_events_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -521,7 +521,7 @@ func (x *CurrencyInfo) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CurrencyInfo.ProtoReflect.Descriptor instead.
 func (*CurrencyInfo) Descriptor() ([]byte, []int) {
-	return file_order_events_proto_rawDescGZIP(), []int{5}
+	return file_callback_order_events_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *CurrencyInfo) GetIdentifier() *CurrencyIdentity {
@@ -557,7 +557,7 @@ type BcTxOperation struct {
 
 func (x *BcTxOperation) Reset() {
 	*x = BcTxOperation{}
-	mi := &file_order_events_proto_msgTypes[6]
+	mi := &file_callback_order_events_proto_msgTypes[6]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -569,7 +569,7 @@ func (x *BcTxOperation) String() string {
 func (*BcTxOperation) ProtoMessage() {}
 
 func (x *BcTxOperation) ProtoReflect() protoreflect.Message {
-	mi := &file_order_events_proto_msgTypes[6]
+	mi := &file_callback_order_events_proto_msgTypes[6]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -582,7 +582,7 @@ func (x *BcTxOperation) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use BcTxOperation.ProtoReflect.Descriptor instead.
 func (*BcTxOperation) Descriptor() ([]byte, []int) {
-	return file_order_events_proto_rawDescGZIP(), []int{6}
+	return file_callback_order_events_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *BcTxOperation) GetIndex() uint32 {
@@ -622,7 +622,7 @@ type OperationsList struct {
 
 func (x *OperationsList) Reset() {
 	*x = OperationsList{}
-	mi := &file_order_events_proto_msgTypes[7]
+	mi := &file_callback_order_events_proto_msgTypes[7]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -634,7 +634,7 @@ func (x *OperationsList) String() string {
 func (*OperationsList) ProtoMessage() {}
 
 func (x *OperationsList) ProtoReflect() protoreflect.Message {
-	mi := &file_order_events_proto_msgTypes[7]
+	mi := &file_callback_order_events_proto_msgTypes[7]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -647,7 +647,7 @@ func (x *OperationsList) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use OperationsList.ProtoReflect.Descriptor instead.
 func (*OperationsList) Descriptor() ([]byte, []int) {
-	return file_order_events_proto_rawDescGZIP(), []int{7}
+	return file_callback_order_events_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *OperationsList) GetOperations() []*BcTxOperation {
@@ -667,7 +667,7 @@ type OwnerWalletInfo struct {
 
 func (x *OwnerWalletInfo) Reset() {
 	*x = OwnerWalletInfo{}
-	mi := &file_order_events_proto_msgTypes[8]
+	mi := &file_callback_order_events_proto_msgTypes[8]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -679,7 +679,7 @@ func (x *OwnerWalletInfo) String() string {
 func (*OwnerWalletInfo) ProtoMessage() {}
 
 func (x *OwnerWalletInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_order_events_proto_msgTypes[8]
+	mi := &file_callback_order_events_proto_msgTypes[8]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -692,7 +692,7 @@ func (x *OwnerWalletInfo) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use OwnerWalletInfo.ProtoReflect.Descriptor instead.
 func (*OwnerWalletInfo) Descriptor() ([]byte, []int) {
-	return file_order_events_proto_rawDescGZIP(), []int{8}
+	return file_callback_order_events_proto_rawDescGZIP(), []int{8}
 }
 
 func (x *OwnerWalletInfo) GetWalletUUID() string {
@@ -725,7 +725,7 @@ type BcTxInfo struct {
 
 func (x *BcTxInfo) Reset() {
 	*x = BcTxInfo{}
-	mi := &file_order_events_proto_msgTypes[9]
+	mi := &file_callback_order_events_proto_msgTypes[9]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -737,7 +737,7 @@ func (x *BcTxInfo) String() string {
 func (*BcTxInfo) ProtoMessage() {}
 
 func (x *BcTxInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_order_events_proto_msgTypes[9]
+	mi := &file_callback_order_events_proto_msgTypes[9]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -750,7 +750,7 @@ func (x *BcTxInfo) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use BcTxInfo.ProtoReflect.Descriptor instead.
 func (*BcTxInfo) Descriptor() ([]byte, []int) {
-	return file_order_events_proto_rawDescGZIP(), []int{9}
+	return file_callback_order_events_proto_rawDescGZIP(), []int{9}
 }
 
 func (x *BcTxInfo) GetNetworkIdentifier() uint32 {
@@ -830,7 +830,7 @@ type Order struct {
 
 func (x *Order) Reset() {
 	*x = Order{}
-	mi := &file_order_events_proto_msgTypes[10]
+	mi := &file_callback_order_events_proto_msgTypes[10]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -842,7 +842,7 @@ func (x *Order) String() string {
 func (*Order) ProtoMessage() {}
 
 func (x *Order) ProtoReflect() protoreflect.Message {
-	mi := &file_order_events_proto_msgTypes[10]
+	mi := &file_callback_order_events_proto_msgTypes[10]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -855,7 +855,7 @@ func (x *Order) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Order.ProtoReflect.Descriptor instead.
 func (*Order) Descriptor() ([]byte, []int) {
-	return file_order_events_proto_rawDescGZIP(), []int{10}
+	return file_callback_order_events_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *Order) GetOrderIdentifier() *OrderIdentity {
@@ -966,7 +966,7 @@ type OrderEvent struct {
 
 func (x *OrderEvent) Reset() {
 	*x = OrderEvent{}
-	mi := &file_order_events_proto_msgTypes[11]
+	mi := &file_callback_order_events_proto_msgTypes[11]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -978,7 +978,7 @@ func (x *OrderEvent) String() string {
 func (*OrderEvent) ProtoMessage() {}
 
 func (x *OrderEvent) ProtoReflect() protoreflect.Message {
-	mi := &file_order_events_proto_msgTypes[11]
+	mi := &file_callback_order_events_proto_msgTypes[11]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -991,7 +991,7 @@ func (x *OrderEvent) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use OrderEvent.ProtoReflect.Descriptor instead.
 func (*OrderEvent) Descriptor() ([]byte, []int) {
-	return file_order_events_proto_rawDescGZIP(), []int{11}
+	return file_callback_order_events_proto_rawDescGZIP(), []int{11}
 }
 
 func (x *OrderEvent) GetEventIdentity() string {
@@ -1057,11 +1057,11 @@ func (x *OrderEvent) GetOrderInfo() *Order {
 	return nil
 }
 
-var File_order_events_proto protoreflect.FileDescriptor
+var File_callback_order_events_proto protoreflect.FileDescriptor
 
-const file_order_events_proto_rawDesc = "" +
+const file_callback_order_events_proto_rawDesc = "" +
 	"\n" +
-	"\x12order_events.proto\x12\x0ecallbackevents\"+\n" +
+	"\x1bcallback_order_events.proto\x12\x0ecallbackevents\"+\n" +
 	"\x15EstimationFeeIdentify\x12\x12\n" +
 	"\x04UUID\x18\x01 \x01(\tR\x04UUID\"/\n" +
 	"\x19EstimationFeeUnitIdentify\x12\x12\n" +
@@ -1164,20 +1164,20 @@ const file_order_events_proto_rawDesc = "" +
 	"\x1fBC_TX_WAITING_FOR_CONFIRMATIONS\x10\x04BQZOgithub.com/crypto-bundle/bc-wallet-common-callback-api/pkg/proto/callbackeventsb\x06proto3"
 
 var (
-	file_order_events_proto_rawDescOnce sync.Once
-	file_order_events_proto_rawDescData []byte
+	file_callback_order_events_proto_rawDescOnce sync.Once
+	file_callback_order_events_proto_rawDescData []byte
 )
 
-func file_order_events_proto_rawDescGZIP() []byte {
-	file_order_events_proto_rawDescOnce.Do(func() {
-		file_order_events_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_order_events_proto_rawDesc), len(file_order_events_proto_rawDesc)))
+func file_callback_order_events_proto_rawDescGZIP() []byte {
+	file_callback_order_events_proto_rawDescOnce.Do(func() {
+		file_callback_order_events_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_callback_order_events_proto_rawDesc), len(file_callback_order_events_proto_rawDesc)))
 	})
-	return file_order_events_proto_rawDescData
+	return file_callback_order_events_proto_rawDescData
 }
 
-var file_order_events_proto_enumTypes = make([]protoimpl.EnumInfo, 4)
-var file_order_events_proto_msgTypes = make([]protoimpl.MessageInfo, 13)
-var file_order_events_proto_goTypes = []any{
+var file_callback_order_events_proto_enumTypes = make([]protoimpl.EnumInfo, 4)
+var file_callback_order_events_proto_msgTypes = make([]protoimpl.MessageInfo, 13)
+var file_callback_order_events_proto_goTypes = []any{
 	(OrderType)(0),                    // 0: callbackevents.OrderType
 	(OrderStatus)(0),                  // 1: callbackevents.OrderStatus
 	(OperationType)(0),                // 2: callbackevents.OperationType
@@ -1196,7 +1196,7 @@ var file_order_events_proto_goTypes = []any{
 	(*OrderEvent)(nil),                // 15: callbackevents.OrderEvent
 	nil,                               // 16: callbackevents.BcTxInfo.OperationsEntry
 }
-var file_order_events_proto_depIdxs = []int32{
+var file_callback_order_events_proto_depIdxs = []int32{
 	8,  // 0: callbackevents.CurrencyInfo.Identifier:type_name -> callbackevents.CurrencyIdentity
 	9,  // 1: callbackevents.BcTxOperation.CurrencyInfo:type_name -> callbackevents.CurrencyInfo
 	10, // 2: callbackevents.OperationsList.Operations:type_name -> callbackevents.BcTxOperation
@@ -1219,27 +1219,27 @@ var file_order_events_proto_depIdxs = []int32{
 	0,  // [0:15] is the sub-list for field type_name
 }
 
-func init() { file_order_events_proto_init() }
-func file_order_events_proto_init() {
-	if File_order_events_proto != nil {
+func init() { file_callback_order_events_proto_init() }
+func file_callback_order_events_proto_init() {
+	if File_callback_order_events_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_order_events_proto_rawDesc), len(file_order_events_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_callback_order_events_proto_rawDesc), len(file_callback_order_events_proto_rawDesc)),
 			NumEnums:      4,
 			NumMessages:   13,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_order_events_proto_goTypes,
-		DependencyIndexes: file_order_events_proto_depIdxs,
-		EnumInfos:         file_order_events_proto_enumTypes,
-		MessageInfos:      file_order_events_proto_msgTypes,
+		GoTypes:           file_callback_order_events_proto_goTypes,
+		DependencyIndexes: file_callback_order_events_proto_depIdxs,
+		EnumInfos:         file_callback_order_events_proto_enumTypes,
+		MessageInfos:      file_callback_order_events_proto_msgTypes,
 	}.Build()
-	File_order_events_proto = out.File
-	file_order_events_proto_goTypes = nil
-	file_order_events_proto_depIdxs = nil
+	File_callback_order_events_proto = out.File
+	file_callback_order_events_proto_goTypes = nil
+	file_callback_order_events_proto_depIdxs = nil
 }

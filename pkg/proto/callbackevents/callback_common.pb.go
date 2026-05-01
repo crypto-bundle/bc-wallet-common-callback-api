@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.6
 // 	protoc        v6.30.2
-// source: common.proto
+// source: callback_common.proto
 
 package callbackevents
 
@@ -51,11 +51,11 @@ func (x EventType) String() string {
 }
 
 func (EventType) Descriptor() protoreflect.EnumDescriptor {
-	return file_common_proto_enumTypes[0].Descriptor()
+	return file_callback_common_proto_enumTypes[0].Descriptor()
 }
 
 func (EventType) Type() protoreflect.EnumType {
-	return &file_common_proto_enumTypes[0]
+	return &file_callback_common_proto_enumTypes[0]
 }
 
 func (x EventType) Number() protoreflect.EnumNumber {
@@ -64,35 +64,35 @@ func (x EventType) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use EventType.Descriptor instead.
 func (EventType) EnumDescriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{0}
+	return file_callback_common_proto_rawDescGZIP(), []int{0}
 }
 
-var File_common_proto protoreflect.FileDescriptor
+var File_callback_common_proto protoreflect.FileDescriptor
 
-const file_common_proto_rawDesc = "" +
+const file_callback_common_proto_rawDesc = "" +
 	"\n" +
-	"\fcommon.proto\x12\x0ecallbackevents*=\n" +
+	"\x15callback_common.proto\x12\x0ecallbackevents*=\n" +
 	"\tEventType\x12\x1a\n" +
 	"\x16PLACEHOLDER_EVENT_TYPE\x10\x00\x12\x14\n" +
 	"\x10EVENT_TYPE_ORDER\x10\x01BQZOgithub.com/crypto-bundle/bc-wallet-common-callback-api/pkg/proto/callbackeventsb\x06proto3"
 
 var (
-	file_common_proto_rawDescOnce sync.Once
-	file_common_proto_rawDescData []byte
+	file_callback_common_proto_rawDescOnce sync.Once
+	file_callback_common_proto_rawDescData []byte
 )
 
-func file_common_proto_rawDescGZIP() []byte {
-	file_common_proto_rawDescOnce.Do(func() {
-		file_common_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_common_proto_rawDesc), len(file_common_proto_rawDesc)))
+func file_callback_common_proto_rawDescGZIP() []byte {
+	file_callback_common_proto_rawDescOnce.Do(func() {
+		file_callback_common_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_callback_common_proto_rawDesc), len(file_callback_common_proto_rawDesc)))
 	})
-	return file_common_proto_rawDescData
+	return file_callback_common_proto_rawDescData
 }
 
-var file_common_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_common_proto_goTypes = []any{
+var file_callback_common_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
+var file_callback_common_proto_goTypes = []any{
 	(EventType)(0), // 0: callbackevents.EventType
 }
-var file_common_proto_depIdxs = []int32{
+var file_callback_common_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
 	0, // [0:0] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -100,26 +100,26 @@ var file_common_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_common_proto_init() }
-func file_common_proto_init() {
-	if File_common_proto != nil {
+func init() { file_callback_common_proto_init() }
+func file_callback_common_proto_init() {
+	if File_callback_common_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_common_proto_rawDesc), len(file_common_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_callback_common_proto_rawDesc), len(file_callback_common_proto_rawDesc)),
 			NumEnums:      1,
 			NumMessages:   0,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_common_proto_goTypes,
-		DependencyIndexes: file_common_proto_depIdxs,
-		EnumInfos:         file_common_proto_enumTypes,
+		GoTypes:           file_callback_common_proto_goTypes,
+		DependencyIndexes: file_callback_common_proto_depIdxs,
+		EnumInfos:         file_callback_common_proto_enumTypes,
 	}.Build()
-	File_common_proto = out.File
-	file_common_proto_goTypes = nil
-	file_common_proto_depIdxs = nil
+	File_callback_common_proto = out.File
+	file_callback_common_proto_goTypes = nil
+	file_callback_common_proto_depIdxs = nil
 }
