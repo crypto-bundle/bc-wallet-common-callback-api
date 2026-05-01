@@ -152,7 +152,7 @@ var File_callback_api_proto protoreflect.FileDescriptor
 
 const file_callback_api_proto_rawDesc = "" +
 	"\n" +
-	"\x12callback_api.proto\x12\x0ecallbackevents\x1a\x12order_events.proto\x1a\fcommon.proto\x1a\x1cgoogle/api/annotations.proto\"\x93\x01\n" +
+	"\x12callback_api.proto\x12\x0ecallbackevents\x1a\x15callback_common.proto\x1a\x1bcallback_order_events.proto\x1a\x1cgoogle/api/annotations.proto\"\x93\x01\n" +
 	"\x0fNewEventRequest\x128\n" +
 	"\n" +
 	"event_type\x18\x01 \x01(\x0e2\x19.callbackevents.EventTypeR\teventType\x12=\n" +
@@ -203,8 +203,8 @@ func file_callback_api_proto_init() {
 	if File_callback_api_proto != nil {
 		return
 	}
-	file_order_events_proto_init()
-	file_common_proto_init()
+	file_callback_common_proto_init()
+	file_callback_order_events_proto_init()
 	file_callback_api_proto_msgTypes[0].OneofWrappers = []any{
 		(*NewEventRequest_OrderEvent)(nil),
 	}

@@ -9,10 +9,10 @@
   
     - [CallbackAPI](#callbackevents-CallbackAPI)
   
-- [common.proto](#common-proto)
+- [callback_common.proto](#callback_common-proto)
     - [EventType](#callbackevents-EventType)
   
-- [order_events.proto](#order_events-proto)
+- [callback_order_events.proto](#callback_order_events-proto)
     - [BcTxIdentity](#callbackevents-BcTxIdentity)
     - [BcTxInfo](#callbackevents-BcTxInfo)
     - [BcTxInfo.OperationsEntry](#callbackevents-BcTxInfo-OperationsEntry)
@@ -94,10 +94,10 @@ Merchant RPC api gateway
 
 
 
-<a name="common-proto"></a>
+<a name="callback_common-proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## common.proto
+## callback_common.proto
 
 
  
@@ -122,10 +122,10 @@ Merchant RPC api gateway
 
 
 
-<a name="order_events-proto"></a>
+<a name="callback_order_events-proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## order_events.proto
+## callback_order_events.proto
 
 
 
